@@ -207,7 +207,7 @@ function startPaperclip() {
     }
 
     // Detect ready
-    if (!paperclipReady && (text.includes("Server listening on") || text.includes("server listening"))) {
+    if (!paperclipReady && (text.includes("Server listening on") || text.includes("server listening") || text.includes("Server startup recovery complete"))) {
       paperclipReady = true;
       console.log(`\n✅ Paperclip ready — proxying :${PUBLIC_PORT} → :${PAPERCLIP_PORT}\n`);
 
